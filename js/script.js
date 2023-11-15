@@ -1,38 +1,23 @@
 "use strict";
+const numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?', '');
 
-const category = 'ibu';
-console.log(category);
-console.log(`https://huiprosci.com/${category}/33`);
+const personalMovieDb = {
+    count: numberOfFilms,
+    movies: {}, 
+    actors: {},
+    genres: [],
+    privat: false
+};
 
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
 
-let number = 4;
-console.log(4*16);
-console.log('string'*9);
+    personalMovieDb.movies[a] = b;
+    personalMovieDb.movies[c] = d; 
+    //personalMovieDb.movies[c] = d;
 
-// // let und;
+    console.log(personalMovieDb);
 
-// const obj = {
-//     name: "John",
-//     age: 25,
-//     IsMarried: false
-// };
-// console.log(obj.IsMarried);
-
-// let arrow = ['ahah', 'jhjh', 6, 'dfdfdf'];
-// console.log(arrow[1]);
-
-
-// // a = 33;
-// // console.log(a);
-
-
-// // console.log(66);
-// // let number = 5; // переменная изменяема
-// // const leftBorderfWidth = 1;
-
-// // // number = 10;
-// // // console.log(number);
-// // // leftBorderfWidth = 22;
-// // // console.log(leftBorderfWidth);
-// // const
 
