@@ -1,4 +1,4 @@
-"use stict";
+"use strict";
 
 const category = 'ibu';
 console.log(category);
