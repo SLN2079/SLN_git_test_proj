@@ -20,4 +20,9 @@ const a = prompt('Один из последних просмотренных ф
 
     console.log(personalMovieDb);
 
+    if(numberOfFilms == 0) {
+        console.log('he is not read');
+    } else {
+        console.log('bigger then 0')
 
+    };
