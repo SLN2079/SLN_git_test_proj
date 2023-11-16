@@ -1,6 +1,7 @@
 "use strict";
 const numberOfFilms = +prompt ('Сколько фильмов вы уже посмотрели?', '');
 
+
 const personalMovieDb = {
     count: numberOfFilms,
     movies: {}, 
@@ -8,21 +9,30 @@ const personalMovieDb = {
     genres: [],
     privat: false
 };
+  
+    for(let i = 0; i < 2; i++){
+        const a = prompt('Один из последних просмотренных фильмов?', ''),
+              b = prompt('На сколько оцените его?', '');
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
+        if (a != null && b != null && a != '' && b != '' && a.length < 50){
+            personalMovieDb.movies[a] = b;
+        } else{
+            console.log('ERROR')
+            i--;
+        }
 
-    personalMovieDb.movies[a] = b;
-    personalMovieDb.movies[c] = d; 
-    //personalMovieDb.movies[c] = d;
+        
+    }
 
     console.log(personalMovieDb);
 
-    if(numberOfFilms == 0) {
-        console.log('he is not read');
-    } else {
-        console.log('bigger then 0')
-
+    if(personalMovieDb.count == 0) {
+        alert('he is not watch moovies');
+    } else if(personalMovieDb.count < 10 && personalMovieDb.count !=0) {
+        alert('Недодрочил до 10-ти фильмов');
+    }else{ 
+        alert('много фильмов смотришь, скоро ослепнешь!');
+    
     };
+
+   
