@@ -9,7 +9,6 @@ function start(){
         namberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
     }
 }
-
 start();
 
 const personalMoovieDB = { //DB
@@ -31,7 +30,6 @@ function rememberMyFilms(){
         }  
     };
 }
-
 rememberMyFilms();
 
 function detectPersonalLevel(){
@@ -45,15 +43,25 @@ function detectPersonalLevel(){
         alert ('Хуйня какая-то')
     };
 }
-
 detectPersonalLevel();
-console.log (personalMoovieDB);  
 
-// // function showMyDb (privat){
-// //     return personalMoovieDB;
-// // }
+function showMyDb(){
+     if (personalMoovieDB.privat == false) {
+     console.log (personalMoovieDB); 
+ };
+}
+showMyDb();
 
-// // let result = privat(a,b)
+function writeYourGenres(){
+    for (let i = 1; i <= 3; i++ ) {
+        const genre = prompt (`Ваш любимый жанр под номером ${i}`, '');
+        personalMoovieDB.generes[i - 1] = genre; 
+    }
+};
+
+writeYourGenres();
+
+
    
 
 
